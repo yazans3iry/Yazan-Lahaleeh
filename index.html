@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بيتزا هيفن - قطعة السعادة</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Welcome Page -->
+  <div id="welcomePage" class="welcome-page">
+    <div class="welcome-content">
+      <div class="logo-container">
+        <img src="images/logo/neon-logo.jpeg" alt="بيتزا هيفن" class="logo">
+      </div>
+      <h1 class="welcome-title">بيتزا هيفن</h1>
+      <p class="welcome-description">قطعة السعادة - أشهى أنواع البيتزا والوجبات السريعة</p>
+      
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/972556683964" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      
+      <div class="welcome-buttons">
+        <button id="viewInstructionsBtn" class="btn btn-secondary">تعليمات الاستخدام</button>
+        <button id="goToOrderBtn" class="btn btn-primary">اطلب الآن</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Order Page -->
+  <div id="orderPage" class="order-page" style="display: none;">
+    <div class="container">
+      <div class="header">
+        <img src="images/logo/neon-logo.jpeg" alt="بيتزا هيفن" class="header-logo">
+      </div>
+      
+      <div class="restaurant-info">
+        <h1 class="restaurant-name">بيتزا هيفن</h1>
+        <div id="restaurantStatus" class="restaurant-status status-open">مفتوح الآن</div>
+        
+        <div class="restaurant-details">
+          <div class="detail-item">
+            <i class="fas fa-map-marker-alt detail-icon"></i>
+            <span>العزيزية - الشارع الرئيسي - فوق مسجد خليفة بجانب مفروشات الحريري</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-clock detail-icon"></i>
+            <span>10:00 - 23:00</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-phone detail-icon"></i>
+            <span>02-2794570 / 0598531267</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Categories Bar -->
+      <div id="categoriesBar" class="categories-bar"></div>
+      
+      <!-- Products Display -->
+      <div id="productsContainer" class="products-container"></div>
+    </div>
+    
+    <!-- Cart Bar -->
+    <div id="cartBar" class="cart-bar">
+      <div class="cart-info">
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cartCount" class="cart-count">0</span>
+        </div>
+        <div id="cartTotal" class="cart-total">0 ₪</div>
+      </div>
+      <button id="viewCartBtn" class="view-cart-btn">عرض الطلب</button>
+    </div>
+  </div>
+  
+  <script type="module">
+    import menuData from './js/menu.js';
+    window.menuData = menuData;
+  </script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
